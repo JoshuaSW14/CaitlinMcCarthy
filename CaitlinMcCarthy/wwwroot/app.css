@@ -99,3 +99,50 @@ h1:focus {
     font-size: 1.2em;
     color: #555;
 }
+
+.nav-menu {
+    background-color: #343a40; /* Dark background */
+    color: white;
+}
+
+.nav-link {
+    color: white;
+}
+
+    .nav-link.active {
+        background-color: #007bff; /* Highlight for active link */
+        color: white;
+    }
+
+.nav-menu .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.main {
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #343a40; /* Darker text for headings */
+}
+
+p {
+    color: #666; /* Slightly lighter text for paragraphs */
+}
+
+/* Style for buttons, if needed */
+button {
+    background-color: #007bff; /* Blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #0056b3;
+    }

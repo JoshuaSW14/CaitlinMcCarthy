@@ -1,0 +1,15 @@
+﻿@page "/date-ideas"
+@inject CaitlinMcCarthy.Client.Models.DateIdeaGenerator DateIdeaGenerator
+
+<h3>Random Date Idea</h3>
+<button @onclick="GenerateIdea">Generate Idea</button>
+<p>@idea</p>
+
+@code {
+    private string idea = string.Empty;
+
+    private void GenerateIdea()
+    {
+        idea = DateIdeaGenerator.GetRandomDateIdea();
+    }
+}

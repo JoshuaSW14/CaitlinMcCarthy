@@ -4,10 +4,13 @@ public class MessageGenerator
     private static readonly List<string> Messages = new List<string>
     {
         "I hope you have a good day!",
-        "Thinking of you always makes me smile.",
-        "You mean the world to me.",
-        "I'm so lucky to have you in my life.",
-        "Every moment with you is precious.",
+        "Thinking of you always makes me smile",
+        "You mean the world to me",
+        "I'm so lucky to have you in my life",
+        "Every moment with you is precious",
+        "You're my favorite person",
+        "I love you!",
+        "I love you to the moon and back",
         // Add more messages here
     };
 

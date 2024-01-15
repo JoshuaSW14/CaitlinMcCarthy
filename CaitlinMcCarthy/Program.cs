@@ -1,4 +1,4 @@
-using CaitlinMcCarthy.Client.Pages;
+using CaitlinMcCarthy.Client.Models;
 using CaitlinMcCarthy.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
+
+builder.Services.AddSingleton<DateIdeaGenerator>();
+builder.Services.AddSingleton<MessageGenerator>();
 
 var app = builder.Build();
 

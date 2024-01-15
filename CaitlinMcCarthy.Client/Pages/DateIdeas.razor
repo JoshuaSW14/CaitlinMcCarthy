@@ -1,9 +1,12 @@
 ﻿@page "/date-ideas"
+@rendermode InteractiveWebAssembly
 @inject CaitlinMcCarthy.Client.Models.DateIdeaGenerator DateIdeaGenerator
 
-<h3>Random Date Idea</h3>
-<button @onclick="GenerateIdea">Generate Idea</button>
-<p>@idea</p>
+<div class="date-ideas-container">
+    <h3>Random Date Idea</h3>
+    <button class="date-ideas-button" @onclick="GenerateIdea">Generate Idea</button>
+    <p class="date-ideas-output">@idea</p>
+</div>
 
 @code {
     private string idea = string.Empty;
@@ -11,5 +14,6 @@
     private void GenerateIdea()
     {
         idea = DateIdeaGenerator.GetRandomDateIdea();
+        StateHasChanged();
     }
 }

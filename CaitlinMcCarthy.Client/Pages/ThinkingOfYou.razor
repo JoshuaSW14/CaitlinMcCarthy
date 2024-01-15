@@ -1,9 +1,13 @@
 ﻿@page "/loving-messages"
+@page "/"
+@rendermode InteractiveWebAssembly
 @inject CaitlinMcCarthy.Client.Models.MessageGenerator MessageGenerator
 
-<h3>Random Loving Message</h3>
-<button @onclick="GenerateMessage">Generate Message</button>
-<p>@message</p>
+<div class="loving-messages-container">
+    <h3>Random Loving Message</h3>
+    <button class="loving-messages-button" @onclick="GenerateMessage">Generate Message</button>
+    <p class="loving-messages-output">@message</p>
+</div>
 
 @code {
     private string message = string.Empty;
@@ -11,5 +15,6 @@
     private void GenerateMessage()
     {
         message = MessageGenerator.GetRandomMessage();
+        StateHasChanged();
     }
 }

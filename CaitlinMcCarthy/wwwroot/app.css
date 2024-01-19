@@ -146,3 +146,20 @@ button {
     button:hover {
         background-color: #0056b3;
     }
+
+#elephant-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Adjust based on how much of the bottom you want the elephant to use */
+    overflow: hidden;
+}
+
+#elephant {
+    position: absolute;
+    bottom: 0;
+    width: 100px; /* Adjust based on the size of your image */
+    height: auto;
+    transition: left 2s linear; /* Smooth transition for walking effect */
+}

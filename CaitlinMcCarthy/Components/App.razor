@@ -9,12 +9,35 @@
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="CaitlinMcCarthy.styles.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
+
     <HeadOutlet />
 </head>
 
 <body>
     <Routes />
     <script src="_framework/blazor.web.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var container = document.getElementById('elephant-container');
+            var elephant = document.getElementById('elephant');
+            var containerWidth = container.offsetWidth;
+            var lastPosition = 0;
+
+            setInterval(function () {
+                var newPosition = Math.floor(Math.random() * (containerWidth - elephant.offsetWidth));
+
+                // Flip the elephant image based on direction
+                if (newPosition > lastPosition) {
+                    elephant.style.transform = 'scaleX(1)'; // Facing right
+                } else {
+                    elephant.style.transform = 'scaleX(-1)'; // Facing left
+                }
+
+                elephant.style.left = newPosition + 'px';
+                lastPosition = newPosition;
+            }, 2000); // Change position every 2 seconds
+        });
+    </script>
 </body>
 
 </html>

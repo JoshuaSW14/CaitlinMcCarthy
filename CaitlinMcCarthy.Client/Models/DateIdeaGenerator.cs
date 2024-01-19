@@ -17,7 +17,8 @@ public class DateIdeaGenerator
         "Go to a local festival",
         "Cook a meal together",
         "Go on a bike ride",
-        "Plan a trip together"
+        "Plan a trip together",
+
     };
 
     private static readonly Random Random = new Random();

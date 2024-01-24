@@ -37,6 +37,20 @@
                 lastPosition = newPosition;
             }, 2000); // Change position every 2 seconds
         });
+        document.addEventListener("DOMContentLoaded", function () {
+            var container = document.getElementById('bird-container');
+            var bird = document.getElementById('bird');
+            var containerWidth = container.offsetWidth;
+            var containerHeight = container.offsetHeight;
+
+            setInterval(function () {
+                var newPositionX = Math.floor(Math.random() * (containerWidth - bird.offsetWidth));
+                var newPositionY = Math.floor(Math.random() * (containerHeight - bird.offsetHeight));
+
+                bird.style.left = newPositionX + 'px';
+                bird.style.top = newPositionY + 'px';
+            }, 3000); // Change position every 3 seconds
+        });
     </script>
 </body>
 

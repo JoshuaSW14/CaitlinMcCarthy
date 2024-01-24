@@ -163,3 +163,19 @@ button {
     height: auto;
     transition: left 2s linear; /* Smooth transition for walking effect */
 }
+
+#bird-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#bird {
+    position: absolute;
+    width: 50px; /* Adjust based on your image size */
+    height: auto;
+    transition: all 2s ease-in-out; /* Smooth transition for flying effect */
+}
